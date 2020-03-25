@@ -1,4 +1,4 @@
-FROM php:7.2-fpm-alpine
+FROM php:7.2.29-fpm-alpine3.11
 
 # Tip from https://github.com/docker-library/php/issues/57#issuecomment-318056930
 # and https://github.com/docker-library/php/issues/279#issuecomment-236441847
