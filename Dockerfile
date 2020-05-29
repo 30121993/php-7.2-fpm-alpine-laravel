@@ -45,6 +45,9 @@ RUN apk add --no-cache libmcrypt-dev \
     && yes | pecl install -o -f mcrypt-1.0.1 \
     && docker-php-ext-enable mcrypt
 
+# Used for PDF generation with wkhtmltopdf
+RUN apk --update add libxrender libxext
+
 COPY ./php/laravel.ini  /usr/local/etc/php/conf.d
 COPY ./php/xlaravel.pool.conf /usr/local/etc/php-fpm.d/
 COPY ./php/php72.ini /usr/local/etc/php/php.ini
